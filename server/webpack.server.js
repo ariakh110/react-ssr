@@ -1,11 +1,11 @@
 const path = require("path");
 module.exports = {
+  mode:"none",
   target: "node",
   entry: "./src/index.js",
-  context: path.resolve(__dirname),
   output: {
-    path: path.resolve(__dirname, "build"),
     filename: "bundle.js",
+    path: path.resolve(__dirname, "build"),
   },
   module: {
     rules: [
@@ -15,15 +15,11 @@ module.exports = {
         exclude: /node_modules/,
         options: {
           presets: [
-            "react",
-            "stage-0",
-            ["env", { targets: { browsers: ["last 2 versions"] } }],
+            "@babel/react",
+            ["@babel/env", { targets: { browsers: ["last 2 versions"] } }],
           ],
         },
       },
     ],
   },
-  resolve: {},
-  devtool: "source-map",
-  plugins: [],
 };
