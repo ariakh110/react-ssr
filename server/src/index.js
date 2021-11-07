@@ -1,4 +1,7 @@
 import express from 'express';
+import React from 'rect';
+import { renderToString } from 'react-dom/server';
+import Home from './client/components/Home';
 const app = express();
 
 
@@ -7,7 +10,8 @@ const app = express();
 
 
 app.get('/', (req, res) => {
-    // todo
+    const content = renderToString(<Home/>)
+    res.send(content);
 });
 
 
