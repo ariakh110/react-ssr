@@ -6,7 +6,7 @@ const Html = (props) => {
       <html>
         <head></head>
         <body>
-          <div>{Parser(props.content)}</div>
+          <div id="root">{Parser(props.content)}</div>
           <script src="bundle.js"></script>
         </body>
       </html>

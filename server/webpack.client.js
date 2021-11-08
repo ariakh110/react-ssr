@@ -1,6 +1,6 @@
 const path = require("path");
 module.exports = {
-  mode:"none",
+  mode:'',
   entry: "./src/client/client.js",
   output: {
     filename: "bundle.js",
@@ -21,4 +21,6 @@ module.exports = {
       },
     ],
   },
+  plugins: [
+  ],
 };
