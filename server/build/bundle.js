@@ -30586,7 +30586,6 @@ var app = express__WEBPACK_IMPORTED_MODULE_0___default()();
 app.use(express__WEBPACK_IMPORTED_MODULE_0___default()["static"]("public"));
 app.get("/", function (req, res) {
   var content = (0,react_dom_server__WEBPACK_IMPORTED_MODULE_2__.renderToString)( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_client_components_Home__WEBPACK_IMPORTED_MODULE_3__["default"], null));
-  console.log(content);
   var html = (0,react_dom_server__WEBPACK_IMPORTED_MODULE_2__.renderToString)( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_Html__WEBPACK_IMPORTED_MODULE_4__["default"], {
     content: content
   }));

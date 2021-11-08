@@ -10,9 +10,7 @@ app.use(express.static("public"));
 
 app.get("/", (req, res) => {
   const content = renderToString(<Home />);
-  console.log(content);
   const html = renderToString(<Html content={content} />);
-  
   res.send(html);
 });
 
