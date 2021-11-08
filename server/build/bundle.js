@@ -26814,6 +26814,18 @@ var Home = function Home() {
 /******/ 	}
 /******/ 	
 /************************************************************************/
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	(() => {
 /******/ 		// define getter functions for harmony exports
@@ -26853,19 +26865,22 @@ var Home = function Home() {
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
+// This entry need to be wrapped in an IIFE because it need to be in strict mode.
 (() => {
-var express = __webpack_require__(1);
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
+/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(express__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(123);
+/* harmony import */ var react_dom_server__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(127);
+/* harmony import */ var _client_components_Home__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(131);
 
-var React = __webpack_require__(123);
 
-var renderToString = (__webpack_require__(127).renderToString);
 
-var Home = (__webpack_require__(131)["default"]);
 
-var app = express();
+var app = express__WEBPACK_IMPORTED_MODULE_0___default()();
 app.get("/", function (req, res) {
-  var content = renderToString( /*#__PURE__*/React.createElement(Home, null));
+  var content = (0,react_dom_server__WEBPACK_IMPORTED_MODULE_2__.renderToString)( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_client_components_Home__WEBPACK_IMPORTED_MODULE_3__["default"], null));
   res.send(content);
 });
 app.listen(3000, function () {
